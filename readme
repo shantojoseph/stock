@@ -1,1 +1,67 @@
 
+ build the project  using  maven 
+ 
+ mvn clean install
+ 
+ run the price app fisrt 
+ 
+then build and run the stock price app
+
+to acesss any API you need to authenticate fisrt with basic authentication 
+
+username : admin
+password : password
+
+
+Create user
+
+http://localhost:8080/user
+
+http method : POST
+
+SAMPLE body 
+
+{
+    "name":"joseph",
+    "subscriptionType":"GOLD"
+}
+
+
+update the user
+
+http://localhost:8080/user
+
+{
+    "userId":"1",
+    "subscriptionType":"GOLD"
+}
+
+
+Get the stock price for the period 
+
+http://localhost:8080/stock/price?ticker=JPMC:INC&fromDate=20220202&toDate=20220202
+
+http method : GET 
+
+header :userId
+
+
+Scope of improvemnts 
+
+Document the API using swagger or Open API
+Test covergae can be improved
+Transaction management 
+logging needs to added 
+
+Scale 
+
+In order to allow scaling may have to go for a service mesh option instaed using an application filter 
+logs can be pushed to kafka streems and kafka connector can write to the DB.
+
+
+
+
+
+
+
+
