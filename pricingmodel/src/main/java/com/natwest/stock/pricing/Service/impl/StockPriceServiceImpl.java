@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Service
 public class StockPriceServiceImpl implements StockPriceService {
 
-    private RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate = new RestTemplate();
 
     @Override
     public BigDecimal findFuturePrice(String ticker, LocalDate fromDate, LocalDate toDate) {

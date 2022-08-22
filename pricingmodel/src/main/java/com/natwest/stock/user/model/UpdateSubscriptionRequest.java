@@ -6,6 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class UpdateSubscriptionRequest {
-    Long userId ;
+    Long userId;
     Subscription subscriptionType;
 }

@@ -5,7 +5,6 @@ import com.natwest.stock.pricing.Service.StockPriceService;
 import com.natwest.stock.pricing.model.Error;
 import com.natwest.stock.pricing.model.Stock;
 import com.natwest.stock.pricing.model.StockResponse;
-import com.natwest.stock.user.enitty.User;
 import com.natwest.stock.user.repository.UserRepository;
 import com.natwest.stock.user.service.UserValidatorService;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -21,7 +20,6 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class StockPriceController {

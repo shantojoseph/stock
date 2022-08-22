@@ -7,20 +7,18 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @Configuration
-public class SecurityConfig extends WebSecurityConfigurerAdapter
-{
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
-    protected void configure(HttpSecurity http) throws Exception
-    {
+    protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests().anyRequest().authenticated()
                 .and()
                 .httpBasic();
     }
+
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth)
-            throws Exception
-    {
+            throws Exception {
         auth.inMemoryAuthentication()
                 .withUser("admin")
                 .password("{noop}password")

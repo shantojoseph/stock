@@ -7,6 +7,7 @@ import com.natwest.stock.user.model.UserRegistrationRequest;
 
 public interface UserRegistrationService {
     User register(UserRegistrationRequest userRegistrationRequest);
-    User updateSubscription (UpdateSubscriptionRequest subscriptionRequest) throws Exception;
+
+    User updateSubscription(UpdateSubscriptionRequest subscriptionRequest) throws Exception;
 
 }

@@ -9,7 +9,7 @@ insert into  unit_model values(0,'unlimited');
 
 DELETE call_limit_model;
 insert into call_limit_model values(1,6,2,1);
-insert into call_limit_model values(2,1,1,1);
+insert into call_limit_model values(2,1,2,1);
 insert into call_limit_model values(3,1000,5,1);
 
 DELETE stock_limit_model;

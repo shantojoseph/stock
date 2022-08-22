@@ -31,7 +31,7 @@ public class UserRegistrationController {
         UserResponse response = new UserResponse();
 
         try {
-            User user=   userRegistrationService.register(registrationRequest);
+            User user = userRegistrationService.register(registrationRequest);
             response.setUser(user);
         } catch (Exception e) {
             response = getErrorResponse(e);

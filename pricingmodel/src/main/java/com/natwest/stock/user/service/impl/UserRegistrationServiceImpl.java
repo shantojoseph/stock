@@ -27,12 +27,10 @@ public class UserRegistrationServiceImpl implements UserRegistrationService {
     @Override
     public User updateSubscription(UpdateSubscriptionRequest subscriptionRequest) throws Exception {
         Optional<User> user = userRepository.findById(subscriptionRequest.getUserId());
-        if(user.isPresent())
-        {
+        if (user.isPresent()) {
             user.get().setSubscriptionModelId(Long.valueOf(subscriptionRequest.getSubscriptionType().value));
-           return userRepository.save(user.get());
-        }
-        else {
+            return userRepository.save(user.get());
+        } else {
             throw new Exception("User not found ");
         }
     }
