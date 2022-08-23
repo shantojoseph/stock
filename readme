@@ -13,7 +13,7 @@ username : admin
 password : password
 
 
-Create user
+Create USER
 
 http://localhost:8080/user
 
@@ -26,8 +26,17 @@ SAMPLE body
     "subscriptionType":"GOLD"
 }
 
+curl --location --request POST 'http://localhost:8080/user' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic YWRtaW46cGFzc3dvcmQ=' \
+--header 'Cookie: JSESSIONID=530FF5A81870898FC97C1AFD21E598D6' \
+--data-raw '{
+    "name":"joseph",
+    "subscriptionType":"GOLD"
+}'
 
-update the user
+
+Update Plan
 
 http://localhost:8080/user
 
@@ -35,6 +44,14 @@ http://localhost:8080/user
     "userId":"1",
     "subscriptionType":"GOLD"
 }
+
+curl --location --request PUT 'http://localhost:8080/user' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=530FF5A81870898FC97C1AFD21E598D6' \
+--data-raw '{
+    "userId":"2",
+    "subscriptionType":"DEMO"
+}'
 
 
 Get the stock price for the period 
@@ -44,6 +61,18 @@ http://localhost:8080/stock/price?ticker=JPMC:INC&fromDate=20220202&toDate=20220
 http method : GET 
 
 header :userId
+
+
+curl --location --request GET 'http://localhost:8080/stock/price?ticker=JPMC:INC9&fromDate=20220202&toDate=20220202' \
+--header 'Content-Type: application/json' \
+--header 'userId: 2' \
+--header 'Authorization: Basic YWRtaW46cGFzc3dvcmQ=' \
+--header 'Cookie: JSESSIONID=530FF5A81870898FC97C1AFD21E598D6' \
+--data-raw '{
+    "name":"joseph",
+    "subscriptionType":"GOLD"
+}'
+
 
 
 Scope of improvemnts 
