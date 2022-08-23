@@ -85,7 +85,11 @@ logging needs to added
 Scale 
 
 In order to allow scaling may have to go for a service mesh option instaed using an application filter 
-logs can be pushed to kafka streems and kafka connector can write to the DB.
+request events logs  can be pushed to kafka streams and kafka connector can write to the DB
+
+
+
+
 
 
 
